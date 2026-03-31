@@ -1,0 +1,26 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-splitr-midnight text-slate-300 font-sans antialiased overflow-x-hidden;
+    font-family: 'Inter', sans-serif;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    @apply text-slate-100 font-semibold;
+  }
+}
+
+@layer utilities {
+  .glass-panel {
+    @apply bg-splitr-navy/60 backdrop-blur-xl border border-white/10 shadow-glass rounded-2xl;
+  }
+  
+  .glass-button {
+    @apply relative overflow-hidden bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl transition-all duration-300 active:scale-95 hover:bg-white/10 shadow-[0_4px_12px_rgba(0,0,0,0.1)] hover:shadow-[0_8px_24px_rgba(0,0,0,0.2)] hover:-translate-y-0.5;
+  }
+}
